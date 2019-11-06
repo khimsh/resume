@@ -1,33 +1,19 @@
 @font-face {
-    font-family: 'Calibri';
-    src: url('../fonts/Calibriregularitalic.woff2') format('woff2');
-    font-weight: normal;
-    font-style: italic;
+	font-family: 'Calibri';
+	src: url('../fonts/Calibribold.woff2') format('woff2');
+	font-weight: bold;
+	font-style: normal;
 }
-
 @font-face {
-    font-family: 'Calibri';
-    src: url('../fonts/Calibribolditalic.woff2') format('woff2');
-    font-weight: bold;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Calibri';
-    src: url('../fonts/Calibribold.woff2') format('woff2');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Calibri';
-    src: url('../fonts/calibriregular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'Calibri';
+	src: url('../fonts/calibriregular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
 }
 
 :root {
 	--link: #027185;
+	--link-hover: #004ab8;
 }
 
 *,
@@ -56,7 +42,7 @@ a:visited {
 
 a:hover,
 a:active {
-	color: #004ab8;
+	color: var(--link-hover);
 }
 
 .container {
@@ -113,8 +99,15 @@ a:active {
 }
 
 .content {
-	display: grid;
-	grid-template-columns: 7fr 3fr;
+	display: flex;
+	justify-content: space-between;
+}
+
+@supports(display: grid) {
+	.content {
+		display: grid;
+		grid-template-columns: 7fr 3fr;
+	}
 }
 
 .about p {
@@ -193,6 +186,24 @@ aside li {
 	border-radius: 100%;
 	background-position: center;
 	background-repeat: no-repeat;
+}
+
+.experience ul li,
+.education ul li {
+	display: flex;
+	transition: all .1s linear;
+}
+
+.date {
+	margin-right: 10px;
+	width: 160px;
+	color: #6b6b6b;
+	font-weight: 700;
+}
+
+.experience ul li:hover,
+.education ul li:hover {
+	background-color: #e7e7e7;
 }
 
 .check-list li {
