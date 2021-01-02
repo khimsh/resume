@@ -1,308 +1,288 @@
 @font-face {
-	font-family: 'Calibri';
-	src: url('../fonts/Calibribold.woff2') format('woff2');
-	font-weight: bold;
-	font-style: normal;
+  font-family: 'Calibri';
+  src: url('../fonts/Calibribold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
 }
 @font-face {
-	font-family: 'Calibri';
-	src: url('../fonts/calibriregular.woff2') format('woff2');
-	font-weight: normal;
-	font-style: normal;
+  font-family: 'Calibri';
+  src: url('../fonts/calibriregular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
 :root {
-	--link: #027185;
-	--link-hover: #004ab8;
+  --link: #027185;
+  --link-hover: #004ab8;
 }
 
 *,
 *::before,
 *::after {
-	margin: 0;
-	padding: 0;
-	box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 html {
-	font-size: 100%;
+  font-size: 100%;
 }
 
 body {
-	box-sizing: border-box;
-	line-height: 1.5;
-	font-family: 'Calibri', sans-serif;
+  box-sizing: border-box;
+  line-height: 1.5;
+  font-family: 'Calibri', sans-serif;
 }
 
 a:link,
 a:visited {
-	color: var(--link);
-	transition: all .2s linear;
+  color: var(--link);
+  transition: all 0.2s linear;
 }
 
 a:hover,
 a:active {
-	color: var(--link-hover);
+  color: var(--link-hover);
 }
 
 .container {
-	max-width: 1366px;
-	margin: 0 auto;
+  max-width: 1366px;
+  margin: 0 auto;
 }
 
 .header {
-	width: 100%;
-	height: 200px;
-	padding: 0 40px;
-	background: #343b45;
-	color: #fff;
+  width: 100%;
+  height: 200px;
+  padding: 0 40px;
+  background: #343b45;
+  color: #fff;
 
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header h1 {
-	font-weight: 400;
-	font-size: 3rem;
-	line-height: 3rem;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 3rem;
 }
 
 .header h2 {
-	font-size: 1.8rem;
-	color: #e7e7e7;
-}
-
-.header__photo {
-	width: 120px;
-	height: 120px;
-	border-radius: 100%;
-	overflow: hidden;
-	filter: grayscale(.9);
-	transition: filter .2s ease-in;
-}
-
-.header__photo img {
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-.header__photo:hover {
-	filter: grayscale(0);
+  font-size: 1.8rem;
+  color: #e7e7e7;
 }
 
 .section-header {
-	font-size: 1.6rem;
-	color: #2f2f36;
+  font-size: 1.6rem;
+  color: #2f2f36;
 }
 
 .content {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
-@supports(display: grid) {
-	.content {
-		display: grid;
-		grid-template-columns: 7fr 3fr;
-	}
+@supports (display: grid) {
+  .content {
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+  }
 }
 
 .about p {
-	font-size: 1.1rem;
+  font-size: 1.1rem;
 }
 
 aside {
-	padding: 20px 40px;
-	background: #eeeded;
+  padding: 20px 40px;
+  background: #eeeded;
 }
 
 aside .section-header {
-	font-size: 1.6rem;
-	color: #58585e;
-	padding-bottom: 4px;
-	margin-bottom: 10px;
-	border-bottom: 1px dashed #9b9b9b;
+  font-size: 1.6rem;
+  color: #58585e;
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+  border-bottom: 1px dashed #9b9b9b;
 }
 
 aside ul {
-	list-style: none;
+  list-style: none;
 }
 
 main li,
 aside li {
-	margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .map-pin,
 .mail,
 .github,
 .linkedin {
-	position: relative;
-	padding-left: 26px;
+  position: relative;
+  padding-left: 26px;
 }
 
 .map-pin::before,
 .mail::before,
 .github::before,
 .linkedin::before {
-	content: '';
-	position: absolute;
-	top: 1px;
-	left: 0;
-	width: 20px;
-	height: 20px;
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 20px;
+  height: 20px;
 }
 
 .map-pin::before {
-	background: url('../icons/map-pin.svg'), #343b45;
-	background-size: 14px;
-	border-radius: 100%;
-	background-position: center;
-	background-repeat: no-repeat;
+  background: url('../icons/map-pin.svg'), #343b45;
+  background-size: 14px;
+  border-radius: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .mail::before {
-	background: url('../icons/mail.svg'), #343b45;
-	background-size: 14px;
-	border-radius: 100%;
-	background-position: center;
-	background-repeat: no-repeat;
+  background: url('../icons/mail.svg'), #343b45;
+  background-size: 14px;
+  border-radius: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .github::before {
-	background: url('../icons/github.svg'), #343b45;
-	background-size: 14px;
-	border-radius: 100%;
-	background-position: center;
-	background-repeat: no-repeat;
+  background: url('../icons/github.svg'), #343b45;
+  background-size: 14px;
+  border-radius: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .linkedin::before {
-	background: url('../icons/linkedin.svg'), #343b45;
-	background-size: 14px;
-	border-radius: 100%;
-	background-position: center;
-	background-repeat: no-repeat;
+  background: url('../icons/linkedin.svg'), #343b45;
+  background-size: 14px;
+  border-radius: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .experience ul li,
 .education ul li {
-	display: flex;
-	transition: all .1s linear;
+  display: flex;
+  transition: all 0.1s linear;
 }
 
 .experience ul li:hover,
 .education ul li:hover {
-	background-color: #e7e7e7;
+  background-color: #e7e7e7;
 }
 
 .date {
-	margin-right: 10px;
-	width: 160px;
-	color: #6b6b6b;
-	font-weight: 700;
+  margin-right: 10px;
+  width: 160px;
+  color: #6b6b6b;
+  font-weight: 700;
 }
 
 .check-list li {
-	position: relative;
-	padding-left: 26px;
+  position: relative;
+  padding-left: 26px;
 }
 
 .check-list li::before {
-	content: '';
-	position: absolute;
-	top: 1px;
-	left: 0;
-	width: 20px;
-	height: 20px;
-	border-radius: 100%;
-	background: url('../icons/check.svg'), #343b45;
-	background-size: 15px;
-	background-position: center;
-	background-repeat: no-repeat;
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background: url('../icons/check.svg'), #343b45;
+  background-size: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 aside section {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 main {
-	padding: 20px 40px;
+  padding: 20px 40px;
 }
 
 main .section-header {
-	font-size: 1.6rem;
-	color: #6b6b6b;
-	padding-bottom: 4px;
-	margin-bottom: 10px;
-	border-bottom: 1px dashed #9b9b9b;
+  font-size: 1.6rem;
+  color: #6b6b6b;
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+  border-bottom: 1px dashed #9b9b9b;
 }
 
 main ul {
-	list-style-type: none;
+  list-style-type: none;
 }
 
 main section {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 @media only screen and (min-width: 1367px) {
-	.container{
-		margin: 30px auto;
-		box-shadow: 4px 4px 10px rgba(0,0,0,.3);
-	}
+  .container {
+    margin: 30px auto;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  }
 }
 
 @media only screen and (max-width: 920px) {
-	.content {
-		display: flex;
-		flex-direction: column-reverse;
-	}
+  .content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 
 @media only screen and (max-width: 680px) {
-	.header {
-		flex-direction: column-reverse;
-		align-items: flex-start;
-		padding: 20px 40px;
-		height: auto;
-	}
+  .header {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    padding: 20px 40px;
+    height: auto;
+  }
 
-	.header__photo {
-		margin-bottom: 10px;
-	}
+  .header__photo {
+    margin-bottom: 10px;
+  }
 
-	.header h1 {
-		font-size: 2.5rem;
-	}
+  .header h1 {
+    font-size: 2.5rem;
+  }
 
-	.header h2 {
-		font-size: 1.3rem;
-	}
+  .header h2 {
+    font-size: 1.3rem;
+  }
 
-	main li {
-		font-size: 1rem;
-		word-wrap: break-word;
-	}
+  main li {
+    font-size: 1rem;
+    word-wrap: break-word;
+  }
 }
 
 @media only screen and (max-width: 560px) {
-	.header,
-	aside,
-	main {
-		padding: 20px;
-	}
+  .header,
+  aside,
+  main {
+    padding: 20px;
+  }
 
-	.experience ul li,
-	.education ul li {
-		flex-direction: column;
-	}
+  .experience ul li,
+  .education ul li {
+    flex-direction: column;
+  }
 
-	.date {
-		width: auto;
-		margin-bottom: 6px;
-	}
+  .date {
+    width: auto;
+    margin-bottom: 6px;
+  }
 }
