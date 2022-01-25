@@ -286,3 +286,10 @@ main section {
     margin-bottom: 6px;
   }
 }
+
+@media print {
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+}
